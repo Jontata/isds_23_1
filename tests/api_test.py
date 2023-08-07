@@ -6,7 +6,7 @@ username = my_secrets.tjenestebruger1_usr
 password = my_secrets.tjenestebruger1_pass
 
 
-building_id = '0a3f50ad-9b51-32b8-e044-0003ba298018'
+building_id = 'EAID_F8196C58_7115_48a6_9A1D_B49BC0F6289A'
 registration_from = 'your_registration_from_date'
 registration_to = 'your_registration_to_date'
 
