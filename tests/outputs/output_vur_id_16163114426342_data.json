@@ -1,0 +1,99 @@
+[
+    {
+        "id": 16163114426342,
+        "ajourf\u00f8ringDato": "2023-01-02T15:00:36.000000+01:00",
+        "antalMedvurderedeLejligheder": 40,
+        "benyttelseKode": "01",
+        "d\u00e6kningsafgiftForskelV\u00e6rdi": 0,
+        "d\u00e6kningsafgiftPligtKode": "",
+        "d\u00e6kningsafgiftPligtTypeKode": "",
+        "ejendomv\u00e6rdiBel\u00f8b": 31500000,
+        "grundv\u00e6rdiBel\u00f8b": 15740300,
+        "juridiskKategoriKode": "0",
+        "juridiskKategoriTekst": "",
+        "juridiskUnderkategoriKode": "0",
+        "juridiskUnderkategoriTekst": "",
+        "vurderetAreal": 15800,
+        "vurderingskredsKode": 4,
+        "\u00e6ndringDato": "2016-10-01T00:00:00",
+        "\u00e6ndringKode": "H",
+        "\u00e5r": 2016,
+        "VURMark": 1,
+        "BFEnummerList": [
+            7918721
+        ],
+        "Vurderingsejendom": {
+            "VURejendomsid": 13005860004180,
+            "ESRejendomsnummer": 8296,
+            "ESRkommunenummer": 740
+        },
+        "Grundv\u00e6rdispecifikation": [
+            {
+                "areal": 0,
+                "bel\u00f8b": 403600,
+                "enhedBel\u00f8b": 403600,
+                "l\u00f8benummer": 6,
+                "prisKode": "M ",
+                "tekst": "Reguleringsnedslag            "
+            },
+            {
+                "areal": 41,
+                "bel\u00f8b": 13120000,
+                "enhedBel\u00f8b": 320000,
+                "l\u00f8benummer": 1,
+                "prisKode": "B ",
+                "tekst": "Byggeretspris                 "
+            },
+            {
+                "areal": 0,
+                "bel\u00f8b": 119436,
+                "enhedBel\u00f8b": 119436,
+                "l\u00f8benummer": 5,
+                "prisKode": "N ",
+                "tekst": "Nedslag for ekstra fundering  "
+            },
+            {
+                "areal": 2176,
+                "bel\u00f8b": 0,
+                "enhedBel\u00f8b": 0,
+                "l\u00f8benummer": 3,
+                "prisKode": "0 ",
+                "tekst": "Kvadratmeterpris              "
+            },
+            {
+                "areal": 13624,
+                "bel\u00f8b": 5449600,
+                "enhedBel\u00f8b": 400,
+                "l\u00f8benummer": 2,
+                "prisKode": "A ",
+                "tekst": "Kvadratmeterpris              "
+            },
+            {
+                "areal": 0,
+                "bel\u00f8b": 2306270,
+                "enhedBel\u00f8b": 2306270,
+                "l\u00f8benummer": 4,
+                "prisKode": "O ",
+                "tekst": "Nedslag:mgl.udstyk,stort areal"
+            }
+        ],
+        "FradragForForbedringOverordnet": {
+            "f\u00f8rsteGang\u00c5r": 1989,
+            "v\u00e6rdiSum": 2455500,
+            "FradragForForbedring": [
+                {
+                    "l\u00f8benummer": 2,
+                    "tekst": "",
+                    "v\u00e6rdi": 1350700,
+                    "\u00e5r": 1997
+                },
+                {
+                    "l\u00f8benummer": 1,
+                    "tekst": "",
+                    "v\u00e6rdi": 1160000,
+                    "\u00e5r": 1989
+                }
+            ]
+        }
+    }
+]
