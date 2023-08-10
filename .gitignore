@@ -1,1 +1,2 @@
 tests/my_secrets.py
+tests/__pycache__/*
