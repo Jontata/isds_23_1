@@ -1,27 +1,45 @@
 import requests
+import json
+import os
 
-def get_metadata_from_dst(tableID, lang="en"):
+def get_data_from_dst(table_id, endpoint = "/data"):
     base_url = "https://api.statbank.dk/v1"
-    endpoint = f"/data/tableinfo/{tableID}?lang={lang}"
-    full_url = base_url + endpoint
-    response = requests.get(full_url)
-    if response.status_code == 200:
-        return response.json()
-    else:
-        return None
-
-def get_data_from_dst(tableID, format="JSONSTAT", lang="en"):
-    base_url = "https://api.statbank.dk/v1"
-    endpoint = f"/data/{tableID}/{format}?lang={lang}"
     full_url = base_url + endpoint
 
-    response = requests.get(full_url)
+    # Payload for the request
+    payload = {
+        "table": f"{table_id}",
+        "format": "JSONSTAT",
+        "valuePresentation": "Default",
+        "timeOrder": "Descending"
+        
+        }
+
+    response = requests.post(full_url, json=payload)  # Using POST method as we're sending a payload
     
     if response.status_code == 200:
         return response.json()
     else:
         return None
 
+def save_to_json(data, filename):
+    output_dir = "./tests/outputs"
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    with open(os.path.join(output_dir, f"{filename}.json"), "w") as outfile:
+        json.dump(data, outfile, indent=4)
+
 # Example usage:
-data = get_metadata_from_dst("FOLK1A")
-print(data)
+"""
+U27
+UDDAKT60
+FOLK1C
+"""
+
+
+table_id = "U27"  # Replace with the desired table ID
+metadata = get_data_from_dst(table_id)
+
+# Save to outputs folder
+save_to_json(metadata, f"dst_extract_{table_id}")

@@ -1,7 +1,5 @@
 import requests
 import my_secrets
-import os
-import json
 
 def get_vur_by_period():
     # Endpoint URL
@@ -34,7 +32,7 @@ def get_vur_by_period():
         return {"error": f"Request failed with status code: {response.status_code}"}
 
 
-def get_vur_by_id(vur_id):
+def get_vur_by_vur_id(vur_id):
     # Endpoint URL
     url = "https://services.datafordeler.dk/Ejendomsvurdering/Ejendomsvurdering/1/rest/HentEjendomsvurderingerForEjendomsvurderingId"
     
@@ -93,17 +91,14 @@ def get_vur_by_ejendoms_id(BFEnummer):
     else:
         return {"error": f"Request failed with status code: {response.status_code}"}
 
+if __name__ in '__main__':
+    import DAWA_api_requests, EBR_api_requests, my_base_functions
+    # gather data
+    target_addresse = "Lundegårdsvej 22, 2900 Hellerup"
+    target_AdresseId = DAWA_api_requests.get_AdresseId_from_dawa(target_addresse)
+    target_BFE = EBR_api_requests.get_BFEnr_from_HusnummerId(target_AdresseId)
+    target_vur_data = get_vur_by_ejendoms_id(target_BFE)
+    # save output
+    my_base_functions.save_json_data(target_vur_data, f"0VUR_output_{target_addresse}.json")
 
-# Test the function with the provided address ID
-address_id_input = "6022778"
-data = get_vur_by_ejendoms_id(address_id_input)
 
-# Save the JSON output to a file in the "outputs" subfolder
-output_dir = "./tests/outputs"
-if not os.path.exists(output_dir):
-    os.makedirs(output_dir)
-
-with open(os.path.join(output_dir, f"output_vur_egendomsid_{address_id_input}_data.json"), "w") as outfile:
-    json.dump(data, outfile, indent=4)
-
-print(f"Data saved to 'outputs/output_vur_{address_id_input}.json'")
