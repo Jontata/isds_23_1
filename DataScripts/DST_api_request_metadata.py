@@ -1,6 +1,8 @@
 import requests
-import json
-import os
+import my_base_functions
+from datetime import datetime
+
+today_date = datetime.today().strftime('%Y-%m-%d')
 
 def get_table_metadata(tableID, lang="en"):
     base_url = "https://api.statbank.dk/v1"
@@ -14,17 +16,10 @@ def get_table_metadata(tableID, lang="en"):
     else:
         return None
 
-def save_to_json(data, filename):
-    output_dir = "./tests/outputs"
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
+if __name__ in '__main__':
+    # Example usage:
+    table_id = "FOLK1C"  # Replace with the desired table ID
+    metadata = get_table_metadata(table_id)
 
-    with open(os.path.join(output_dir, f"{filename}.json"), "w") as outfile:
-        json.dump(data, outfile, indent=4)
-
-# Example usage:
-table_id = "U37"  # Replace with the desired table ID
-metadata = get_table_metadata(table_id)
-
-# Save to outputs folder
-save_to_json(metadata, f"dst_metadata_{table_id}")
+    # Save to outputs folder
+    my_base_functions.save_to_json(metadata, f"{table_id}_metadata_export_{today_date}")

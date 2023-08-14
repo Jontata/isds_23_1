@@ -2,8 +2,14 @@ import json
 import xml.etree.ElementTree as ET
 import my_secrets
 
-source_file = my_secrets.local_path_to_VUR_data
-target_json_file = r"./tests/data_folder/Subset.json"
+
+#! This file is to be removed due to format change in extract!
+
+
+source_file_location = my_secrets.local_output_path_for_data
+source_file_name = "Ejendomsvurdering_Totaludtraek_Flad_Complete_Restricted_XML_20230730000021.xml"
+source_file = f"{source_file_location}/{source_file_name}"
+target_json_file = r"./DataScripts/data_folder/vur_subset.json"
 number_of_lines = 2000
 
 def xml_to_dict(elem):
