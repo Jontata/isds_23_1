@@ -1,2 +1,4 @@
-tests/my_secrets.py
-tests/__pycache__/*
+DataScripts/my_secrets.py
+DataScripts/data_folder/*
+DataScripts/outputs/*
+DataScripts/__pycache__/*
