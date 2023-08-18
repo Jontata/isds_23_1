@@ -94,11 +94,12 @@ def get_vur_by_ejendoms_id(BFEnummer):
 if __name__ in '__main__':
     import DAWA_api_requests, EBR_api_requests, my_base_functions
     # gather data
-    target_addresse = "Lundegårdsvej 22, 2900 Hellerup"
+    target_addresse = "Grønløkke 2, Jegerup"
     target_AdresseId = DAWA_api_requests.get_AdresseId_from_dawa(target_addresse)
     target_BFE = EBR_api_requests.get_BFEnr_from_HusnummerId(target_AdresseId)
+    print(target_AdresseId, target_BFE)
     target_vur_data = get_vur_by_ejendoms_id(target_BFE)
     # save output
-    my_base_functions.save_json_data(target_vur_data, f"0VUR_output_{target_addresse}.json")
+    my_base_functions.save_to_json(target_vur_data, f"0VUR_output_{target_addresse}.json")
 
 
