@@ -1,5 +1,6 @@
 LocalFiles/*
-!LocalFiles/info.md
+Data/*
+!Data/info.md
 API_scripts/outputs/*
 API_scripts/__pycache__/*
 WebScraper/__pycache__/*
