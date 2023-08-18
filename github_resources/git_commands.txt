@@ -3,3 +3,7 @@ git status
 git commit
 
 git push
+
+git reflog
+
+# git reset --hard 315h12
