@@ -1,5 +1,4 @@
-API_scripts/my_secrets.py
-API_scripts/data_folder/*
+LocalFiles/*
 API_scripts/outputs/*
 API_scripts/__pycache__/*
-project_description.pdf
+WebScraper/__pycache__/*
