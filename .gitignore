@@ -1,5 +1,5 @@
-DataScripts/my_secrets.py
-DataScripts/data_folder/*
-DataScripts/outputs/*
-DataScripts/__pycache__/*
+API_scripts/my_secrets.py
+API_scripts/data_folder/*
+API_scripts/outputs/*
+API_scripts/__pycache__/*
 project_description.pdf
