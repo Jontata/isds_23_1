@@ -1,6 +1,6 @@
 LocalFiles/*
 Data/*
 !Data/info.md
-API_scripts/outputs/*
-API_scripts/__pycache__/*
-WebScraper/__pycache__/*
+DataAggregation/API_scripts/outputs/*
+DataAggregation/API_scripts/__pycache__/*
+DataAggregation/WebScraper/__pycache__/*
